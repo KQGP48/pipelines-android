@@ -4,9 +4,16 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/android
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-latest'
 
 steps:
+
+
+- task: CmdLine@2
+    inputs:
+      script: 'echo ls'
+
+
 - task: Gradle@2
   inputs:
     workingDirectory: ''

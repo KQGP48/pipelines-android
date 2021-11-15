@@ -6,12 +6,24 @@
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+  - name: GRADLE_VER
+    value: 7.0.1
+
+
 steps:
 
+- bash : 'echo hello world'
+  displayName: Test Echo
 
-- task: CmdLine@2
-    inputs:
-      script: 'echo ls'
+- task: Bash@3
+  inputs:
+    script: '# echo ${{variables.GRADLE_VER}}'
+  displayName : test bash 2'
+
+- task: Bash@3
+  inputs:
+    script: 'wget'
 
 
 - task: Gradle@2

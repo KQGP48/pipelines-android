@@ -13,7 +13,7 @@ variables:
 
 steps:
 
-- bash : 'echo hello world'
+- bash : 'ls'
   displayName: Test Echo
 
 - task: Bash@3

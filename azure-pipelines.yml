@@ -18,6 +18,7 @@ steps:
 
 - task: Bash@3
   inputs:
+    targetType: 'inline'
     script: |
       echo ${{ variables.GRADLE_VER }}
       echo $(GRADLE_VER)

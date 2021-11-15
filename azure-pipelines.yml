@@ -18,8 +18,11 @@ steps:
 
 - task: Bash@3
   inputs:
-    script: '# echo ${{variables.GRADLE_VER}}'
-  displayName : test bash 2'
+    script: |
+      echo ${{ variables.GRADLE_VER }}
+      echo $(GRADLE_VER)
+    
+  displayName : test bash 2
 
 - task: Bash@3
   inputs:
